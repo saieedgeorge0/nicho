@@ -180,7 +180,7 @@ a {
     width: 160px;
     height: 210px;
     float: left;
-    /* background-image: url("../img/people/george.jpg"); */
+    background-image: url("../img/people/nicho.jpg");
     background-size: cover;
 }
 
@@ -215,7 +215,7 @@ a {
 }
 
 #karthikeyan {
-    background-image: url('../img/people/karthikeyan-thumb.jpg');
+    background-image: url('../img/people/karth-thumb.jpg');
 }
 
 #jeff {
@@ -329,6 +329,10 @@ a {
 .link {
     display: block;
     text-decoration: underline;
+}
+
+.alumni {
+    text-decoration: none;
 }
 
 .contact-email {
@@ -723,7 +727,7 @@ a {
     }
 }
 
-@media (max-width: 868px) {
+@media (max-width: 1080px) {
     .person-info {
         width: 500px;
     }
@@ -859,9 +863,13 @@ a {
     .divider {
         display: none;
     }
+
+    .hehe {
+        display: block;
+    }
 }
 
-@media (max-width: 349px) {
+@media (max-width: 360px) {
     .person-info {
         width: 170px;
         margin-bottom: 5px;

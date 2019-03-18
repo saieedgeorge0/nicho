@@ -15,6 +15,26 @@ $(document).ready(function(){
         $(".perm-shadow").css("opacity", "0.02");
     }
 
+    if ($(window).width() <= 430) {
+        $(".bio").insertAfter($(".person-info"));
+    }
+
+    if ($(window).width() > 430) {
+        $(".bio").insertAfter($(".contact-info"));
+    }
+
+    $(window).on('resize', function(){
+        if ($(window).width() <= 430) {
+            $(".bio").insertAfter($(".person-info"));
+        }
+    
+        if ($(window).width() > 430) {
+            $(".bio").insertAfter($(".contact-info"));
+        }
+    });
+
+
+
     if ($(window).width() > 640) {
         sections.each(function() {
             currentPage = "#" + $(this).attr('id') + "n";
@@ -183,16 +203,16 @@ $(document).ready(function(){
         In 2001, he co-founded a company, Cyberkinetics Neurotechnology Systems, which took the basic scientific research he and his colleagues conducted to develop neural prosthesis technology to assist people with severe motor disabilities. <br><br>
         
         His research focuses on the neural basis of motor control and learning. He is investigating what features of motor behavior are encoded and how this information is represented in the collective activity of neuronal ensembles in the motor cortex. He is also interested in how these representations change as motor learning occurs.  To answer these questions, the electrical discharge of many motor cortical neurons is simultaneously recorded using multi-electrode arrays and correlated with motor behavior. The encoding properties of individual motor cortical neurons are being studied to determine how these single cell properties relate to higher-order representations involving groups of neurons. The possibility that changes in functional connectivity among neurons may occur during motor learning is also being explored.`, './img/people/nicho.jpg', '', ''],
-        "rebecca" : ['Rebecca Junod, B.S.', 'Lab Manager', 'junodrm@uchicago.edu', 'bio', './img/people', '', ''],
-        "karthikeyan" : ['Karthikeyan Balasubramanian, Ph.D.', 'Placeholder', 'karthikeyanb@uchicago.edu', 'bio', './img/people', '', ''],
-        "jeff" : ['Jeff Walker, Ph.D.', 'Placeholder', 'walkerjd@uchicago.edu', 'Jeff defended his PhD in July 2018 after developing methods for studying the cortical contributions to motor control with marmosets engaging in unconstrained natural behaviors.', './img/people/jeff.jpg', '', ''],
+        "rebecca" : ['Rebecca Junod, B.S.', 'Lab Manager', 'junodrm@uchicago.edu', 'I am from Ohio and studied Zoology at Miami University. After graduating and working in a rodent lab, I enjoyed field work following wild hamadryas baboons in Ethiopia. I came to Chicago with interest in working with laboratory primates.', './img/people/rebecca.jpg', '', ''],
+        "karthikeyan" : ['Karthikeyan Balasubramanian, Ph.D.', 'Senior Researcher', 'karthikeyanb@uchicago.edu', 'Karthikeyan Balasubramanian’s research focuses on understanding the ensemble neural dynamics of motor and sensory cortices, and developing multi-degrees of freedom brain-machine interfaces (BMIs). He studies cortical functional connectivity in de-efferented motor regions using BMIs, and employs artificial electrical stimulation (ICMS) as a mechanism to study both neural dynamics of motor behavior, and provide synthetic perception. His collaboration research includes studying the dynamics of orofacial regions of the cortex using large-scale ensemble recordings and their relevant kinematics using XROMM (X-ray Reconstruction of Moving Morphology). He earned his doctoral degree in Electrical and Computer Engineering from Temple University in 2011, with a specialization in bio-electronics. He completed his M.Tech degree from Indian Institute of Technology-Delhi, and B.Tech degree from Bharathidasan University, both from India.', './img/people/karth.jpg', 'Google Scholar Profile', 'https://scholar.google.com/citations?user=ogHJoi0AAAAJ&hl=en&oi=ao'],
+        "jeff" : ['Jeff Walker, Ph.D.', 'Postdoctoral Scholar', 'walkerjd@uchicago.edu', 'Jeff defended his PhD in July 2018 after developing methods for studying the cortical contributions to motor control with marmosets engaging in unconstrained natural behaviors.', './img/people/jeff.jpg', '', ''],
         "vasileios" : ['Vasileios Papadourakis, Ph.D.', 'Postdoctoral Scholar', 'vpapadourakis@uchicago.edu', 'My interests are broadly in the field of motor control with a focus on the sensory capabilities of the motor system and its role in perception. My research is driven by two kinds of questions: First, how is visual and somatosensory information represented and utilized by the motor system to prepare, initiate, monitor and control movement. Second, what is the nature and significance of the motor system’s visual responses during action observation. My BSc is in Applied Mathematics and my M.S. in the Brain and Mind Sciences. For my PhD, I studied the functional properties of primate premotor cortex during execution and observation of grasping actions.', './img/people/vasileios.jpg', 'Google Scholar Profile', 'https://scholar.google.com/citations?user=vWdfch8AAAAJ&hl=en'],
-        "alex" : ['Alex Lee, M.S.', 'Placeholder', 'leealex@uchicago.edu', 'bio', './img/people/alex.png', '', ''],
-        "marina" : ['Marina Sundiang, B.S.', 'Placeholder', 'sundiang@uchicago.edu', 'Marina Sundiang is a PhD Candidate in computational neuroscience studying motor learning in marmosets.', './img/people/marina.jpg', '', ''],
-        "wei" : ['Wei Liang, M.S.', 'Placeholder', 'weiliang@uchicago.edu', 'Wei Liang is a PhD Candidate at the University of Chicago.', './img/people/wei.jpg', '', ''],
+        "alex" : ['Alex Lee, M.S.', 'Graduate Student', 'leealex@uchicago.edu', 'I am interested in investigating cortical communication structure between the primary motor (M1) and somatosensory (S1) cortex in monkeys. ', './img/people/alex.png', '', ''],
+        "marina" : ['Marina Sundiang, B.S.', 'Graduate Student', 'sundiang@uchicago.edu', 'Marina Sundiang is a PhD Candidate in computational neuroscience studying motor learning in marmosets.', './img/people/marina.jpg', '', ''],
+        "wei" : ['Wei Liang, M.S.', 'Graduate Student', 'weiliang@uchicago.edu', 'Wei Liang is a PhD Candidate at the University of Chicago.', './img/people/wei.jpg', '', ''],
         "dalton" : ['Dalton Moore, B.S.', 'Graduate Student', 'daltonm@uchicago.edu', 'Dalton is a PhD student in the Computational Neuroscience program. He completed a Bachelor\'s and a Master\'s Degree in Biomedical Engineering at Arizona State University. He is interested in the fundamental operations computed by motor cortical circuits, and particularly the functional connectivity patterns that produce these computations at the local and macro-scale.', './img/people/dalton.jpg', '', ''],
         "caleb" : ['Caleb Sponheim, B.S.', 'Graduate Student', 'calebsponheim@uchicago.edu', 'Caleb Sponheim is trying to understand how the brain learns, plans and executes movements. He leverages those findings to improve the experience of using brain-machine interfaces, which help restore function to people who have disabilities.', './img/people/caleb.jpg', 'Personal Site', 'http://www.calebsponheim.com/'],
-        "george" : ['George Saieed', 'Undergrad Research Assistant', 'gs@georgesaieed.com', 'bio', './img/people/george.jpeg', 'Personal Site', 'http://georgesaieed.com']
+        "george" : ['George Saieed', 'Undergraduate Student', 'gs@georgesaieed.com', 'George Saieed is a fourth year undergraduate studying neuroscience at The College. In his spare time, he dabbles in photography, web development (like building this site!), squash, and piano. He\'ll be pursuing an MD in the fall, though he\'s not quite sure where just yet.', './img/people/george.jpeg', 'Personal Site', 'http://georgesaieed.com']
     }
 
     $(".small-person").click(function(e) {
